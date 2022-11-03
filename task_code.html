@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      td {
+        width: 200px;
+        height: 50px;
+        border: 1px solid;
+        text-align: center;
+      }
+      .buttons {
+        width: 130px;
+      }
+      .user-information {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+      .container {
+        border: 1px solid;
+        width: 50%;
+        text-align: center;
+      }
+      input {
+        width: 200px;
+        margin-right: 40px;
+        margin-left: 40px;
+      }
+      .form {
+        margin-left: 30px;
+      }
+      .button-box {
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+      .button {
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 120px;
+      }
+      .forms {
+        margin-right: 120px;
+        margin-left: 120px;
+      }
+      .title {
+        margin-bottom: 30px;
+      }
+      /* #input-modal-box {
+        display: none;
+      }
+      #delete-modal-box {
+        display: none;
+      } */
+      /* .user-info-given-name {
+        align-items: center;
+      } */
+    </style>
+    <title>課題です</title>
+  </head>
+  <body>
+    <div class="title">ユーザー一覧</div>
+    <table id="table">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>性</td>
+          <td>名</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-tr">
+          <td class="user-number"></td>
+          <td class="user-last-name"></td>
+          <td class="user-given-name"></td>
+          <td><button class="buttons edit-button">編集</button></td>
+          <td><button class="buttons delete-button">削除</button></td>
+        </tr>
+        <tr class="table-tr">
+          <td class="user-number"></td>
+          <td class="user-last-name"></td>
+          <td class="user-given-name"></td>
+          <td><button class="buttons edit-button">編集</button></td>
+          <td><button class="buttons delete-button">削除</button></td>
+        </tr>
+        <tr class="table-tr">
+          <td class="user-number"></td>
+          <td class="user-last-name"></td>
+          <td class="user-given-name"></td>
+          <td><button class="buttons edit-button">編集</button></td>
+          <td><button class="buttons delete-button">削除</button></td>
+        </tr>
+        <tr class="table-tr">
+          <td class="user-number"></td>
+          <td class="user-last-name"></td>
+          <td class="user-given-name"></td>
+          <td><button class="buttons edit-button">編集</button></td>
+          <td><button class="buttons delete-button">削除</button></td>
+        </tr>
+        <tr class="table-tr">
+          <td class="user-number"></td>
+          <td class="user-last-name"></td>
+          <td class="user-given-name"></td>
+          <td><button class="buttons edit-button">編集</button></td>
+          <td><button class="buttons delete-button">削除</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- 編集フォーム -->
+    <section id="input-modal-box" class="input-modal-form">
+      <!--  -->
+      <div class="container">
+        <div class="title">編集</div>
+        <div class="number">ID:<span id="user-num-val"></span></div>
+        <div class="user-information">
+          <div class="forms user-info-given-name">
+            <p>性：</p>
+            <p id="last-name-text"></p>
+          </div>
+          <div class="forms user-info-last-name">
+            <p>名：</p>
+            <p id="given-name-text"></p>
+          </div>
+        </div>
+        <div class="title">ユーザー名変更</div>
+        <div class="user-information">
+          <div class="form user-info-given-name">
+            <p>性：</p>
+            <input id="create-user-last-name" type="text" />
+          </div>
+          <div class="form user-info-last-name">
+            <p>名：</p>
+            <input id="create-user-given-name" type="text" />
+          </div>
+        </div>
+        <div class="button-box">
+          <button id="edit-cancel-button" class="button cancel-button">
+            キャンセル
+          </button>
+          <button id="edit-ok-button" class="button ok-button">OK</button>
+        </div>
+      </div>
+    </section>
+    <!-- 削除フォーム -->
+    <section id="delete-modal-box" class="delete-modal-form">
+      <!--  -->
+      <div class="container">
+        <div class="title">削除</div>
+        <div class="number">ID:<span id="user-num-val"></span></div>
+        <div class="user-information">
+          <div class="forms user-info-given-name">
+            <p>性：</p>
+            <p id="delete-last-name-text"></p>
+          </div>
+          <div id="delete-given-name-text" class="forms user-info-last-name">
+            <p>名：</p>
+            <p></p>
+          </div>
+        </div>
+        <div class="title">本当に削除しますか？</div>
+        <!-- <div class="user-information"> -->
+        <!-- <div class="form user-info-given-name"> -->
+        <!-- <p>性：</p> -->
+        <!-- <input type="text" /> -->
+        <!-- </div> -->
+        <!-- <div class="form user-info-last-name"> -->
+        <!-- <p>名：</p> -->
+        <!-- <input type="text" /> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <div class="button-box">
+          <button id="delete-cancel-button" class="button cancel-button">
+            キャンセル
+          </button>
+          <button id="delete-ok-button" class="button ok-button">OK</button>
+        </div>
+      </div>
+    </section>
+    <script src="task_code.js"></script>
+  </body>
+</html>
